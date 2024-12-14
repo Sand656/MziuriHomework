@@ -41,6 +41,8 @@ public class Hw2 {
                 int k = s.nextInt();
                 arr2[i] = k;
             }
+
+
             try{
                 for(int i=0; i<n; i++){
                     for(int j=0; j<m; j++){
@@ -63,10 +65,8 @@ public class Hw2 {
                     fout.write(arr1[i]);
                 }
             } catch (IOException e) {
-
+                System.out.println("IO exception");
             }
-
-
         }else if(choice==4){
             
         }
