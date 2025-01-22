@@ -30,7 +30,7 @@ public class palindrome {
         int count=0;
         for(int i=0; i<data.length()-1; i++){
             if(data.charAt(i)==','){
-                for(int j=i; j<data.length(); j++){
+                for(int j=i+1; j<data.length(); j++){
                     if(data.charAt(j)==','){
                         arr2[count]=Integer.valueOf(data.substring(i+1,j));
                         count++;
