@@ -3,7 +3,7 @@ package Hw20;
 import java.util.Scanner;
 
 public class Davaleba {
-    public static void file1(String[] args) {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
         if (choice == 1) {
