@@ -1,17 +1,19 @@
 package Hw31;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        int choice=1;
+        Scanner scanner=new Scanner(System.in);
+        int choice=scanner.nextInt();
         if(choice==1){
             ArrayList<Basketballer> players = new ArrayList<>();
             players.add(new Basketballer("a", "d", 30, 10, 2, 8, 3));
             players.add(new Basketballer("b", "e", 25, 5, 1, 10, 4));
             players.add(new Basketballer("c", "f", 28, 12, 3, 6, 5));
             //კლება
-//        for(int i=0; i<players.size(); i++){  //1 2 4 3
+//        for(int i=0; i<players.size(); i++){
 //            for(int j=i; j<players.size(); j++){
 //                if(players.get(j).rating()>players.get(i).rating()){
 //                    Basketballer temp=players.get(i);
@@ -21,7 +23,7 @@ public class Main {
 //            }
 //        }
             //ზრდა
-            for(int i=0; i<players.size(); i++){  //1 2 4 3
+            for(int i=0; i<players.size(); i++){
                 for(int j=i; j<players.size(); j++){
                     if(players.get(j).rating()<players.get(i).rating()){
                         Basketballer temp=players.get(i);
@@ -46,7 +48,7 @@ public class Main {
             System.out.println("Sorted by grade");
         }else if(choice==3){
             ArrayList<Car> cars = new ArrayList<>();
-            for(int i=0; i<cars.size(); i++){  //1 2 4 3
+            for(int i=0; i<cars.size(); i++){
                 for(int j=i; j<cars.size(); j++){
                     if(cars.get(j).engineSort()<cars.get(i).engineSort()){ //შეგვიძლია engineSort ჩავანაცვლოთ
                         Car temp=cars.get(i);
@@ -112,7 +114,7 @@ class StudentSorts{
     }
     ArrayList<Student> sortByGrade() { // აქ უბრალოდ შეგვეძლო averageScore()-ის ნაცვლად birthDateToInt გამოგვეყენებინა და იქნებოდა
         // დაბადების დღით დასორტვა
-        for(int i=0; i<students.size(); i++){  //1 2 4 3
+        for(int i=0; i<students.size(); i++){
             for(int j=i; j<students.size(); j++){
                 if(students.get(j).averageScore()<students.get(i).averageScore()){
                     Student temp=students.get(i);
