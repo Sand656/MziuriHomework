@@ -22,8 +22,11 @@ class Corporation {
     void addEmployee(Employee employee) {
         employees.add(employee);
     }
-    String aboutUs() {
-        return "Address: " + address + "Contact Numbers: " + contactInfo;
+    void aboutUs() {
+        for(Employee employee: employees){
+            System.out.println( "Name: " + employee.firstName + "Contact Numbers: " + contactInfo);
+        }
+
     }
     String getContactNumber(String type) {
         return contactInfo.get(type);
