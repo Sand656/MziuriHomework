@@ -15,10 +15,9 @@ public class Main {
 
             for (int i = 0; i < 16; i++) {
                 int index = (char)random.nextInt(52);
-                password.append((char)index+62);
+                password.append((char)index+(int)'a');
             }
-            String passwordToReturn=password.toString();
-            return passwordToReturn;
+            return password.toString();
         };
         //N2
         Consumer<String> logMessage = (String a) ->{
